@@ -6,7 +6,7 @@ package banco;
 
 /**
  *
- * @author lucas
+ * @author TheCheepeer
  */
 public class Banco {
 
