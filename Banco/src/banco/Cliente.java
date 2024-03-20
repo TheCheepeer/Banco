@@ -12,7 +12,7 @@ public class Cliente {
     private Conta conta;
 
     // Construtor
-    public Cliente(String nome, String email, String telefone, double renda, Endereco endereco) {
+    public Cliente(String nome, String email, String telefone, double renda, Conta conta, Endereco endereco) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
@@ -23,11 +23,11 @@ public class Cliente {
 
     // Inicio Getters and Setters
 
-    public String getNiome() {
+    public String getNome() {
         return nome;
     }
 
-    public void setNiome(String nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
@@ -90,5 +90,12 @@ public class Cliente {
 
     public void fecharConta() {
         this.conta = null;
+    }
+
+    // Imprimir Informação
+
+    public String imprimirInfo() {
+        return "Nome: " + getNome() + "\\n Email: " + getEmail() + "\\nTelefone: " + getTelefone() + "\\nRenda: " +
+                getRenda() + "\\nConta: " + getConta() + "\\nEndereço: " + getEndereco();
     }
 }
