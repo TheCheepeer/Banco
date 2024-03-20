@@ -95,7 +95,7 @@ public class Cliente {
     // Imprimir Informação
 
     public String imprimirInfo() {
-        return "Nome: " + getNome() + "\\n Email: " + getEmail() + "\\nTelefone: " + getTelefone() + "\\nRenda: " +
-                getRenda() + "\\nConta: " + getConta() + "\\nEndereço: " + getEndereco();
+        return "Nome: " + getNome() + "\\n Email: " + getEmail() + "\\nTelefone: " + getTelefone() + "\\nRenda: R$" +
+                String.format("%.2f", getRenda()) + "\\nConta: " + getConta() + "\\nEndereço: " + getEndereco();
     }
 }

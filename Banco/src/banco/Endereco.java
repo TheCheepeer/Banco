@@ -6,16 +6,27 @@ package banco;
  */
 
 public class Endereco {
-    private String cep, logradouro, cidade, uf, complemento;
+    private String cep, logradouro, bairro, cidade, uf, complemento;
+
     private int numero;
 
-    public Endereco(String cep, String logradouro, String cidade, String uf, String complemento, int numero) {
+    public Endereco(String cep, String logradouro, int numero, String bairro, String cidade, String uf,
+            String complemento) {
         this.cep = cep;
         this.logradouro = logradouro;
+        this.bairro = bairro;
         this.cidade = cidade;
         this.uf = uf;
         this.complemento = complemento;
         this.numero = numero;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 
     public String getCep() {
@@ -64,5 +75,16 @@ public class Endereco {
 
     public void setNumero(int numero) {
         this.numero = numero;
+    }
+
+    public String imprimirEndereco() {
+        return "Endereco{" +
+                "cep='" + getCep() + '\'' +
+                ", logradouro='" + getLogradouro() + '\'' +
+                ", numero=" + getNumero() +
+                ", cidade='" + getCidade() + '\'' +
+                ", uf='" + getUf() + '\'' +
+                ", complemento='" + getComplemento() + '\'' +
+                '}';
     }
 }
