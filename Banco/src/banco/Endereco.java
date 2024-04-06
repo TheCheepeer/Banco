@@ -7,7 +7,6 @@ package banco;
 
 public class Endereco {
     private String cep, logradouro, bairro, cidade, uf, complemento;
-
     private int numero;
 
     public Endereco(String cep, String logradouro, int numero, String bairro, String cidade, String uf,
@@ -78,13 +77,11 @@ public class Endereco {
     }
 
     public String imprimirEndereco() {
-        return "Endereco{" +
-                "cep='" + getCep() + '\'' +
-                ", logradouro='" + getLogradouro() + '\'' +
-                ", numero=" + getNumero() +
-                ", cidade='" + getCidade() + '\'' +
-                ", uf='" + getUf() + '\'' +
-                ", complemento='" + getComplemento() + '\'' +
-                '}';
+        return "cep: " + getCep() +
+                ", logradouro: " + getLogradouro() +
+                ", numero: " + getNumero() +
+                ", cidade: " + getCidade() +
+                ", uf: " + getUf() +
+                ", complemento: " + getComplemento();
     }
 }

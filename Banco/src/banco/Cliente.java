@@ -5,7 +5,7 @@ package banco;
  * @author TheCheepeer
  */
 
-public class Cliente {
+public abstract class Cliente {
     private String nome, email, telefone;
     private double renda;
     private Endereco endereco;
@@ -78,7 +78,8 @@ public class Cliente {
     public void abrirConta() {
         if (this.conta == null) {
 
-            this.conta = new Conta();
+            this.conta = new Conta(getConta().getAgencia(), getConta().getIdConta(), getConta().getSenha(),
+                    getConta().getSaldo(), getConta().getCliente(), getConta().getCartao());
         } else {
 
             System.out.println("O cliente já possui uma conta.");
@@ -95,7 +96,8 @@ public class Cliente {
     // Imprimir Informação
 
     public String imprimirInfo() {
-        return "Nome: " + getNome() + "\\n Email: " + getEmail() + "\\nTelefone: " + getTelefone() + "\\nRenda: R$" +
-                String.format("%.2f", getRenda()) + "\\nConta: " + getConta() + "\\nEndereço: " + getEndereco();
+        return "\nNome: " + getNome() + "\nEmail: " + getEmail() + "\nTelefone: " + getTelefone() + "\nRenda: R$" +
+                String.format("%.2f", getRenda()) + "\nConta: " + getConta() + "\nEndereço: "
+                + getEndereco().imprimirEndereco();
     }
 }

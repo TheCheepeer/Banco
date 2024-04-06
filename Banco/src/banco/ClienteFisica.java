@@ -6,7 +6,7 @@ package banco;
  */
 
 public class ClienteFisica extends Cliente {
-    String cpf;
+    private String cpf;
 
     public ClienteFisica(String cpf, String nome, String email, String telefone, Conta conta,
             Endereco endereco, double renda) {
@@ -79,6 +79,6 @@ public class ClienteFisica extends Cliente {
 
     // Imprimir Informação
     public String imprimirInfo() {
-        return super.imprimirInfo() + "\\nCPF: " + getCpf();
+        return super.imprimirInfo() + "\nCPF: " + getCpf();
     }
 }

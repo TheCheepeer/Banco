@@ -7,7 +7,7 @@ package banco;
 
 public class ClienteJuridica extends Cliente {
 
-    String cnpj;
+    private String cnpj;
 
     public ClienteJuridica(String cnpj, String nome, String email, String telefone, Conta conta,
             Endereco endereco, double renda) {
@@ -71,7 +71,7 @@ public class ClienteJuridica extends Cliente {
 
     // Imprimir Informação
     public String imprimirInfo() {
-        return super.imprimirInfo() + "\\nCNPJ: " + getCnpj();
+        return super.imprimirInfo() + "\nCNPJ: " + getCnpj();
     }
 
 }
